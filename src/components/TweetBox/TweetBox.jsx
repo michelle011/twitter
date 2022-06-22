@@ -4,15 +4,16 @@ import "./TweetBox.css";
 
 export default function TweetBox(props) {
   const handleOnSubmit = () => {
-    let newTweet = {
+    var newTweet = {
       id: props.tweets.length,
-      name: props.userPofile.name,
+      name: props.userProfile.name,
       handle: props.userProfile.handle,
-      text: ``,
+      text: "",
       comments: 0,
       retweets: 0,
       likes: 0,
     };
+    props.setTweets(props.tweets.concat(newTweet));
   };
 
   return (

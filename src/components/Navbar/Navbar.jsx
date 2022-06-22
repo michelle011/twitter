@@ -2,6 +2,9 @@ import * as React from "react";
 import AvatarIcon from "../AvatarIcon/AvatarIcon";
 import "./Navbar.css";
 
+// {} means destructured, predetermined "variable" name, feed
+// wants to expect certain props w spec names.
+// undefined navLinks -> <Navbar />
 export default function Navbar({ navLinks }) {
   return (
     <nav>

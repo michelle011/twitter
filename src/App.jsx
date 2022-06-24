@@ -15,13 +15,21 @@ export default function App() {
   // const tweets = result[0];
   // const setTweets = result[1]; is the same as...
   const [tweets, setTweets] = useState([firstTweet]);
+  const [tweetText, setTweetText] = useState("");
 
   return (
     <div className="app">
       <Navbar navLinks={navLinks} />
       <main>
         <UserProfile userProfile={userProfile} />
-        <Feed tweets={tweets} setTweets={setTweets} userProfile={userProfile} />
+        <Feed
+          userProfile={userProfile}
+          setUserProfile={setUserProfile}
+          tweets={tweets}
+          setTweets={setTweets}
+          tweetText={tweetText}
+          setTweetText={setTweetText}
+        />
         <Advertisements />
       </main>
     </div>
